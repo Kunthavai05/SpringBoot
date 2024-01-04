@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Official Details</title>
+
+	<style>
+		body {
+			width:100%;
+			background-color:image;
+			margin: 0px auto;
+			padding: 0;
+			overflow: hidden;
+			align-items: center;
+			justify-content: center;
+		}
+		table,
+		td,
+		th {
+
+			text-align: left;
+			border: 1px solid black;
+			border-collapse: collapse;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px;
+			margin: 0px auto;
+
+
+		}
+
+		th {
+			background-color: gray;
+		}
+		
+		@media print{
+
+			@page {
+			size: A4;
+			margin: 0.36in;
+			
+		}
+
+		}
+		
+
+		.header {
+			
+			text-align: center;
+			padding: 3px;
+			background-color:gray;
+			color: black;
+			
+			
+		}
+
+		.footer {
+			
+			margin-top: 90px;
+			text-align: center;
+			padding: 3px;
+			background-color:gray;
+			color: black; 
+			
+			
+			
+
+		}
+		.parl{
+			width:50%; 
+			float:left;
+		}
+		.parr{
+			width:50%; 
+			float:right;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<header>
+			<h1>SPORTS ACADEMY</h1>
+		</header>
+	</div>
+	
+	    
+        <div class="parl">
+			<div align="center">
+            <h2>CONTENT</h2>
+            </div>
+            <p>
+                " Sports Academy is a full-circle facility designed to update the way men, women and youth approach human performance, by creating a multi-platform environment that activates, educates and provides an opportunity for humans to unlock their full potential."
+            </p>
+        </div>
+        <div class="parr">
+			<div align="center">
+            <h2>CAREER</h2>
+			</div>
+            <p>“ We provide effective, safe and transparent human performance training to develop athletes to the peak of their potential. The Academy enlists diverse experts to support youth, amateur and elite athletes with a full-circle approach that includes body, performance and cognitive training".
+            </p>
+            </div>
+
+	<div align="center ">
+		<h3>Official Details</h3>
+	</div>
+	<div align="center">
+		<table>
+			<tr>
+
+				<th><b>Name</b></th>
+				<th><b>DOB</b></th>
+				<th><b>Email</b></th>
+				<th><b>Phone</b></th>
+
+			</tr>
+			<tr th:each="pdf : ${data}">
+						<td th:text="${pdf.name}"></td>
+						
+						<td th:text="${pdf.dob}"></td>
+						<td th:text="${pdf.email}"></td>
+						<td th:text="${pdf.phone}"></td>
+					</tr>
+		</table>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>
+				Academy Name:MAK<br /> Address :05, Ground Floor,
+				palace street,the art gallery Road,Thanjavur, Tamil Nadu - 613005 <br />
+				<a href="tel:099440 07339">Phone No:9685423175</a> <a
+					href="mailto:MAKACADEMY@gmail.com">(makacademy@gmail.com)</a>
+			</p>
+			</footer>
+	</div>
+	
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
